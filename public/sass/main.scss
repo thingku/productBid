@@ -1,0 +1,171 @@
+$font-stack:    Arial, Helvetica, sans-serif;
+$primary-color: #333;
+
+body .mainContainer {
+	margin:50px auto;
+	display:block;
+	border:solid 1px #DDDDDD;
+	overflow:hidden;
+	padding:10px;
+	border-radius:4px;
+	float:none;
+}
+.mainContainer {
+	.titleHolder {
+		width:100%;
+		float:left;
+		overflow:hidden;
+		display:block;		
+	}
+	.titleHolder h1 {
+		font-family: $font-stack;
+		font-size:20px;
+		color:$primary-color;
+		padding:10px 0;
+		margin:0;
+	}
+	.tableHolder {
+		width:100%;
+		float:left;
+		overflow:hidden;
+		display:block;
+	}
+}
+.tableHolder {
+	table {
+		width:100%;
+		display:table;
+		border-collapse:collapse;
+	}
+	table th {
+		line-height: 30px;
+		padding:0 10px;
+		background-color: #1b72ab;
+		color:#FFFFFF;
+		font-family:$font-stack;
+		font-size:12px;
+		border:solid 1px #FFFFFF;
+		text-align:center;
+	}
+	table td:first-child {
+		text-align:center;
+	}
+	table td {
+		line-height:30px;
+		padding: 0 10px;
+		color:$primary-color;
+		border:solid 1px #DDDDDD;
+		font-family:$font-stack;
+		font-size:12px;		
+	}
+	table td.productTimer,
+	table td.productPrice,
+	table td.productWinner {
+		text-align:center;
+	}
+	table td.productName,
+	table td.productWinner {
+		font-weight:bold;
+	}
+	table td button {
+		line-height:28px;
+		background-color:#bf311e;
+		color:#FFFFFF;
+		width:100%;
+		cursor:pointer;
+		border-radius:2px;
+		border:none;
+		padding:0 15px;
+		font-size:12px;
+		font-weight:bold;
+	}
+	table td button.closed {
+		cursor:no-drop;
+		background-color:#444444;
+	}
+}
+.overlay {
+	width:100%;
+	float:left;
+	overflow:hidden;
+	height:100%;
+	background-color:rgba( 0,0,0,0.8 );
+	position:fixed;
+	top:0;
+}
+.overlay.hidden {
+	display:none;
+}
+.overlay {
+	.overlayDetailsHolder {
+		width: 100%;
+		display:table;
+		overflow:hidden;
+		height:100%;
+	}
+	.overlayDetailsHolder > ul {
+		padding:15px;
+		display:table-cell;
+		margin:0;
+		vertical-align:middle;
+		float:none;
+	}
+	.overlayDetailsHolder > ul > li {
+		width:100%;
+		float:left;
+		overflow:hidden;
+		line-height:30px;
+		padding:10px;
+		background-color:#FFFFFF;		
+		font-size:12px;
+		font-weight:bold;
+		display:block;
+	}
+	.overlayDetailsHolder > ul > li select {
+		padding: 6px 5px;
+		width:100%;
+	}
+	.sectionHolder {
+		width: 100%;
+		float:left;
+		overflow:hidden;
+		padding: 5px 0;
+	}
+	button {
+		line-height:28px;
+		color:#FFFFFF;
+		float:left;
+		cursor:pointer;
+		border-radius:2px;
+		border:none;
+		padding:0 15px;
+		font-size:12px;
+		font-weight:bold;	
+		margin:5px 0;
+	}
+	button.submitBidder {
+		background-color:#337ab7;
+	}
+	button.cancelBidder {
+		background-color:#ce4844;	
+	}
+	.sectionHolder ul {
+		width:auto;
+		float:right;
+		overflow:hidden;
+		display:block;
+	}
+	.sectionHolder ul > li {
+		float:left;
+		overflow:hidden;
+		display:inline-block;
+		padding: 0 5px;
+	}
+	.notificationHolder {
+		widht:100%;
+		line-height:30px;
+		padding:0 10px;
+		background-color:#ce4844;
+		color:#FFFFFF;
+	}
+}
