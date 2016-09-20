@@ -114,7 +114,7 @@ productBidApp.directive( 'submitBidBtn', function() {
 								notification.text( selectedBidder + ' has no bid credits left.' );	
 								return true;					
 							} else {	
-								if ( selectedBidder === v.value ) {														
+								if ( selectedBidder == v.value ) {														
 									bidders[k].productBids.push( productName );	
 									productBids = bidders[k].productBids;		
 									var sortArray = bidders[k].productBids.slice().sort();
@@ -130,7 +130,6 @@ productBidApp.directive( 'submitBidBtn', function() {
 									} else {
 										bidders[k].bidCredits = bidders[k].bidCredits - 1;
 										bidCredits = bidders[k].bidCredits;
-										notification.text('');	
 										selectedWinner.text( selectedBidder );	
 										bidPrice.text( bid.toFixed(2) );	
 										productTimerText.text( 30 );				
@@ -148,13 +147,11 @@ productBidApp.directive( 'submitBidBtn', function() {
 										}, 1000 );																
 										angular.element( document.querySelector( '.selectedRow' ) ).removeClass( 'selectedRow' );	
 										angular.element( document.querySelector('.overlay') ).addClass('hidden');	
-										angular.element( document.querySelector( 'select.bidders' ) ).val('');																					
+										angular.element( document.querySelector( 'select.bidders' ) ).val('');	
+										notification.text('');																															
 									}
 									//console.log( arrayResults );																																					
-								} else {
-									notification.text( 'Impossible to add bidder.' );	
-									return true;
-								}																														
+								} 																													
 							}
 					} );
 				}									
