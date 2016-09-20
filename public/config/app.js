@@ -151,7 +151,10 @@ productBidApp.directive( 'submitBidBtn', function() {
 										angular.element( document.querySelector( 'select.bidders' ) ).val('');																					
 									}
 									//console.log( arrayResults );																																					
-								}																															
+								} else {
+									notification.text( 'Impossible to add bidder.' );	
+									return true;
+								}																														
 							}
 					} );
 				}									
